@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Yijia Sun's Final Project - Living with Pets (Pet Lovers Community Page)</title>
+    <link rel="stylesheet" href="style-PLC.css">
+    <link rel="stylesheet" href="style-signup&login.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Indie+Flower&family=Permanent+Marker&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/3b7e74d9e5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="flex-header">
+            <div style="font-family: 'Indie Flower', cursive; font-size: 2.4rem;"><a href="home.html">Living with Pets</a></div>
+            <div style="margin-left: auto;" id="show-signup">Sign up</div>
+            <div> | </div>
+            <div id="show-login">Log in</div>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <img src="assets\pet-lovers.jpg" alt="pet lovers title image" style="width:100%; height:auto; margin-top:60px;">
+            <div class="title">
+                <h1>Pet Lovers Community</h1>
+                <h2>We Are Family!</h2>
+                <div class="search"><input type="text" name="search input"></div>
+            </div>
+        </div>
+        <div class="vertical-nav">
+            <ul>
+                <li><a href="#post">Short Post</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#article">Article</a></li>
+                <li><a href="#tutorial">Tutorial</a></li>
+                <li><a href="#events">Events</a></li>
+            </ul>
+        </div>
+        <div class="information">
+            <h3>Quick Start...</h3>
+            <!--the post input area-->
+            <form style="width:100%">
+                <input type="text" id="title-input" name="title input" placeholder="Type in title..." class="title-input"><br>
+                <textarea id="content-input" name="content input" placeholder="Type your post..." class="content-input"></textarea><br>
+                <input type="button" name="post button" value="Post" class="button" onclick="addPost()">
+                <input type="reset" name="clear button" value="Clear" class="button">
+            </form>
+            <!--adding tags-->
+            <div>
+                <h4>Tags</h4>
+                <i class="fa-solid fa-circle-plus" style="color: rgb(88, 21, 151);"></i>
+            </div>
+            <!--posts will be displayed in this area by chronological order-->
+            <h3 style="text-decoration:underline; margin-top:20px; margin-bottom:20px;">Recently Posted</h3>
+            <div id="recently-posted" style="width:100%">
+                <div class="post">
+                    <div class="post-title"><a href="#post1">Cuddles with My Furry Friend 🐾</a></div>
+                    <div class="date">10/22/2023, 9:38:00 AM</div>
+                </div>
+
+                <div class="post">
+                    <div class="post-title"><a href="#post2">My Pup New Tricks: Roll Over!</a></div>
+                    <div class="date">10/22/2023, 01:05:00 AM</div>
+                </div>
+
+                <div class="post">
+                    <div class="post-title"><a href="#post3">Tips for Choosing the Perfect Pet for Your Family</a></div>
+                    <div class="date">10/21/2023, 10:49:00 PM</div>
+                </div>
+
+                <div class="post">
+                    <div class="post-title"><a href="#post4">Homemade Pet Treats for Your Furry Friend</a></div>
+                    <div class="date">10/21/2023, 9:22:00 PM</div>
+                </div>
+            </div>
+            <p><a href="#show-more">Show more...</a></p>
+        </div>
+        <div class="hot-post">
+            <h3 style="text-decoration:underline; margin-bottom:20px;">Hot Posts</h3>
+            <div class="post-title"><a href="#post5">Pet Parrot Sings His Favorite Tunes 🦜🎶</a></div>
+            <div class="date">3.8k likes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5k reposts</div>
+
+            <div class="post-title"><a href="#post6">Adventure Time with My Dog: A Day at the Park</a></div>
+            <div class="date">3k likes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1k reposts</div>
+
+            <div class="post-title"><a href="#post7">Puppy Training 101: Building a Strong Foundation for a Well-Behaved Dog</a></div>
+            <div class="date">2.9k likes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.6k reposts</div>
+
+            <div class="post-title"><a href="#post8">Training Cats: From Aloof to Obedient - A Comprehensive Guide</a></div>
+            <div class="date">2.5k likes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1k reposts</div>
+
+            <div class="post-title"><a href="PLC-article.html">Whiskers in the Wild: A Tale of Taming Tigers and Untamed Hearts</a></div>
+            <div class="date">1.9k likes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;988 reposts</div>
+        </div>
+        <script src="js-PLC.js"></script>
+
+        <!--Signup and Login window-->
+        <div class="popup form-hidden">
+
+            <!--login-->
+            <form class="form" id="login" action="php-login.php" method="post">
+                    <!--close button-->
+                <div class="close-btn">&times;</div> <!--&times is an HTML entity code representing the multiplication sign (×)-->
+                <!--login content-->
+                <h4 class="form-title">Login</h4>
+                <div class="form-message form-message-error"></div>
+                <div class="form-input-group">
+                    <input type="text" class="form-input" id="email" name="email" autofocus placeholder="Enter email">
+                    <div class="form-input-error-message"></div>
+                </div>
+                <div class="form-input-group">
+                    <input type="password" class="form-input" id="password" name="password" autofocus placeholder="Enter password">
+                    <div class="form-input-error-message"></div>
+                </div>
+                <button class="form-button">Continue</button>
+                <p class="form-text">
+                    <a href="#forget" class="form-link">Forgot your password?</a>
+                </p>
+                <p class="form-text">
+                    <a href="./" class="form-link" id="linkSignup">Don't have an account? Create account</a>
+                </p>
+            </form>
+
+            <!--signup-->
+            <form class="form" id="signup" action="php-signup.php" method="post" novalidate>
+                    <!--close button-->
+                <div class="close-btn">&times;</div>
+                <!--signup content-->
+                <h4 class="form-title">Signup</h4>
+                <div class="form-message form-message-error"></div>
+                <div class="form-input-group">
+                    <input type="text" class="form-input" id="username" name='username' autofocus placeholder="Enter username"> <!--When the user enters data into a form field, the value of the name attribute becomes the key in the data sent to the server.-->
+                    <div class="form-input-error-message"></div>
+                </div>
+                <div class="form-input-group">
+                    <input type="text" class="form-input" id="email" name='email' autofocus placeholder="Enter email">
+                    <div class="form-input-error-message"></div>
+                </div>
+                <div class="form-input-group">
+                    <input type="password" class="form-input" id="password" name='password' autofocus placeholder="Enter password">
+                    <div class="form-input-error-message"></div>
+                </div>
+                <div class="form-input-group">
+                    <input type="password" class="form-input" id="confirmPassword" name='confirmPassword' autofocus placeholder="Confirm password">
+                    <div class="form-input-error-message"></div>
+                </div>
+                <button class="form-button">Create Account</button>
+                <p class="form-text">
+                    <a href="./" class="form-link" id="linkLogin">Already have an account? Log in</a>
+                </p>
+            </form>
+        </div>
+
+        <script src="js-signup&login.js"></script> <!--javascript for signup and login-->
+    </main>
+
+    <footer>
+        <div class="flex-footer">
+            <div style="width: 500px; height: auto; margin-left: 180px;"><em>Let's Make Tommorrow More Beautiful and Hopeful by Living with Our Pets!</em></div>
+            <div> <img src="assets\div-line.png" alt="Division Line" style="height: 220px"> </div>
+            <div style="width: 300px; height: auto; margin-right: 180px">If you have any questions, please contact <a href="mailto:ys359@duke.edu">ys359@duke.edu</a></div>
+        </div>
+        <div class="credit">
+            This is the Final Project for Fundamentals of Web-Based Multimedia Communications course @Duke University | Made by Yijia Sun
+        </div>
+    </footer>
+</body>
+
+</html>

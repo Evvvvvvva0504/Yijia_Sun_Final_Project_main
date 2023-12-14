@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Yijia Sun's Final Project - Living with Pets (Pet Encyclopedia Page)</title>
+    <link rel="stylesheet" href="style-PE.css">
+    <link rel="stylesheet" href="style-signup&login.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Indie+Flower&family=Permanent+Marker&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="flex-header">
+            <div style="font-family: 'Indie Flower', cursive; font-size: 2.4rem;"><a href="home.html">Living with Pets</a></div>
+            <div style="margin-left: auto;" id="show-signup">Sign up</div>
+            <div> | </div>
+            <div id="show-login">Log in</div>
+        </div>
+    </header>
+
+    <main>
+        <div style="width: 100%;"><h1>Pet Encyclopedia</h1></div>
+        <div class="horizontal-nav">
+            <a class="active" href="#dogs">Dogs</a>
+            <a href="#cats">Cats</a>
+            <a href="#small">Small</a>
+            <a href="#scales">Scales</a>
+            <a href="#wild">Wild</a>
+        </div>
+
+        <div class="vertical-nav">
+            <ul>
+                <li><a class="active" href="#labrador">Labrador Retriever</a></li>
+                <li><a href="#german">German Shepherd</a></li>
+                <li><a href="#golden">Golden Retriever</a></li>
+                <li><a href="#bulldog">Bulldog</a></li>
+                <li><a href="#poodle">Poodle</a></li>
+                <li><a href="#beagle">Beagle</a></li>
+                <li><a href="#rottweiler">Rottweiler</a></li>
+                <li><a href="#yorkshire">Yorkshire Terrier</a></li>
+                <li><a href="#boxer">Boxer</a></li>
+                <li><a href="#dachshund">Dachshund</a></li>
+                <li><a href="#shih">Shih Tzu</a></li>
+                <li><a href="#siberian">Siberian Husky</a></li>
+                <li><a href="#doberman">Doberman Pinscher</a></li>
+                <li><a href="#dane">Great Dane</a></li>
+                <li><a href="#collie">Border Collie</a></li>
+            </ul>
+        </div>
+
+        <div class="information">
+            <img src="assets\Labrador.jpg" alt="Labrador Retriever" style="width: 500px; height:auto; float: right;">
+            <!--Q5. How to make the image be positioned around the <p> instead of independently suspend
+                 over the <p>?
+                Prob Descrip:
+                I wanna the image to be around the <p> as well as any other text area, namely, the background
+                 of <p> (or the bottom border line of <h3>) will automatically wrap to the next line when it 
+                    encounters the image. However, currently it ignore the image, and the image looks like 
+                    suspend over the text area (though the text itself does wrap)-->
+            <h2>Labrador Retriever</h2>
+            <br>
+            <h3>Features</h3>
+            <br>
+            <p>
+                <strong>Size:</strong> Labrador Retrievers are <em>medium</em> to <em>large-sized</em> dogs with a sturdy and muscular build.<br>
+                <strong>Coat:</strong> They have a short, dense double coat that is water-resistant, usually in black, yellow, or chocolate brown.<br>
+                <strong>Ears:</strong> Labrador Retrievers have floppy ears that hang close to their head.<br>
+                <strong>Tail:</strong> They have a distinctive "otter" tail, thick at the base and tapering towards the tip.<br>
+            </p>
+            <br>
+            <h3>Personalities</h3>
+            <br>
+            <p>
+                <strong>Friendly:</strong> Labradors are renowned for their friendly and outgoing nature. They are typically good with people and other animals, making them excellent family pets.<br>
+                <strong>Intelligent:</strong> They are highly intelligent and trainable, often excelling in obedience training and various canine sports.<br>
+                <strong>Energetic:</strong> Labrador Retrievers are known for their boundless energy. They require regular exercise and play to keep them happy and healthy.<br>
+                <strong>Affectionate:</strong> They are affectionate and enjoy being part of family activities. Labradors thrive on human interaction and attention.<br>
+                <strong>Gentle:</strong> Despite their size and energy, they tend to be gentle, particularly with children.<br>
+            </p>
+            <br>
+            <h3>Habits</h3>
+            <br>
+            <p>
+                <strong>Retrieving Instinct:</strong> Labradors have a strong retrieving instinct, which is why they excel in activities like fetching and retrieving objects.<br>
+                <strong>Playfulness:</strong> They are playful dogs and enjoy interactive games and toys.<br>
+                <strong>Love of Water:</strong> Many Labradors love water and swimming, which is related to their history as waterfowl retrievers.<br>
+                <strong>Shedding:</strong> They shed their dense coat year-round, so regular grooming is essential to manage shedding.<br>
+                <strong>Food Motivation: </strong>  Labradors have a strong food drive, making them susceptible to overeating. Careful portion control is essential to maintain a healthy weight.<br>
+            </p>
+        </div>
+
+        <!--Signup and Login window-->
+        <div class="popup form-hidden">
+
+            <!--login-->
+            <form class="form" id="login" action="php-login.php" method="post">
+                    <!--close button-->
+                <div class="close-btn">&times;</div> <!--&times is an HTML entity code representing the multiplication sign (×)-->
+                <!--login content-->
+                <h4 class="form-title">Login</h4>
+                <div class="form-message form-message-error"></div>
+                <div class="form-input-group">
+                    <input type="text" class="form-input" id="email" name="email" autofocus placeholder="Enter email">
+                    <div class="form-input-error-message"></div>
+                </div>
+                <div class="form-input-group">
+                    <input type="password" class="form-input" id="password" name="password" autofocus placeholder="Enter password">
+                    <div class="form-input-error-message"></div>
+                </div>
+                <button class="form-button">Continue</button>
+                <p class="form-text">
+                    <a href="#forget" class="form-link">Forgot your password?</a>
+                </p>
+                <p class="form-text">
+                    <a href="./" class="form-link" id="linkSignup">Don't have an account? Create account</a>
+                </p>
+            </form>
+
+            <!--signup-->
+            <form class="form" id="signup" action="php-signup.php" method="post" novalidate>
+                    <!--close button-->
+                <div class="close-btn">&times;</div>
+                <!--signup content-->
+                <h4 class="form-title">Signup</h4>
+                <div class="form-message form-message-error"></div>
+                <div class="form-input-group">
+                    <input type="text" class="form-input" id="username" name='username' autofocus placeholder="Enter username"> <!--When the user enters data into a form field, the value of the name attribute becomes the key in the data sent to the server.-->
+                    <div class="form-input-error-message"></div>
+                </div>
+                <div class="form-input-group">
+                    <input type="text" class="form-input" id="email" name='email' autofocus placeholder="Enter email">
+                    <div class="form-input-error-message"></div>
+                </div>
+                <div class="form-input-group">
+                    <input type="password" class="form-input" id="password" name='password' autofocus placeholder="Enter password">
+                    <div class="form-input-error-message"></div>
+                </div>
+                <div class="form-input-group">
+                    <input type="password" class="form-input" id="confirmPassword" name='confirmPassword' autofocus placeholder="Confirm password">
+                    <div class="form-input-error-message"></div>
+                </div>
+                <button class="form-button">Create Account</button>
+                <p class="form-text">
+                    <a href="./" class="form-link" id="linkLogin">Already have an account? Log in</a>
+                </p>
+            </form>
+        </div>
+
+        <script src="js-signup&login.js"></script> <!--javascript for signup and login-->
+
+    </main>
+
+    <footer>
+        <div class="flex-footer">
+            <div style="width: 500px; height: auto; margin-left: 180px;"><em>Let's Make Tommorrow More Beautiful and Hopeful by Living with Our Pets!</em></div>
+            <div> <img src="assets\div-line.png" alt="Division Line" style="height: 220px"> </div>
+            <div style="width: 300px; height: auto; margin-right: 180px">If you have any questions, please contact <a href="mailto:ys359@duke.edu">ys359@duke.edu</a></div>
+        </div>
+        <div class="credit">
+            This is the Final Project for Fundamentals of Web-Based Multimedia Communications course @Duke University | Made by Yijia Sun
+        </div>
+    </footer>
+</body>
+
+</html>

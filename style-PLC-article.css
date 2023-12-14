@@ -1,0 +1,341 @@
+* {
+    margin: 0 auto; /*centralize <header>, <main>, and <footer> elements*/
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4f4f4f;
+    font-size: 1.2rem;
+}
+
+/*define header*/
+
+header {
+    max-width: 100vw; /*header element will not shrink as the page shrinks*/
+}
+
+/*flex-header*/
+.flex-header {
+    display: flex;
+    background-color: rgb(62, 12, 109);
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    z-index: 1;
+}
+
+.flex-header > div {
+    color: white;
+    padding: 5px;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 1.8rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.flex-header a {
+    text-decoration: none;
+    color: white;
+}
+
+/*head-menu*/
+.head-menu {
+    padding-top: 100px;
+}
+
+.head-menu p {
+    padding-left: 40px;
+    padding-bottom: 5px;
+}
+
+.head-menu p a {
+    text-decoration: none;
+    color: #898989;
+}
+
+.head-menu p a:hover {
+    color: rgb(0, 82, 204);
+}
+
+.head-menu img {
+    width: 100vw;
+    height: 50vh;
+    margin: 0px;
+}
+
+.horizontal-nav {
+    display: flex;
+    width: 100vw;   
+    align-items: center;
+    align-content: space-between;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 1.5rem;
+    background-color: blueviolet;
+    overflow: hidden;
+}
+
+.horizontal-nav > a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 10px 24px 10px 24px; /*padding: top left bottom right*/
+  text-decoration: none;
+  text-align: center; /*make the text inside the <a> vertically centerred*/
+  margin: auto; /*make the text inside the <a> horizontally centerred*/
+}
+
+.horizontal-nav > a.active {
+  background-color: rgb(62, 12, 109);
+  color: white;
+}
+
+.horizontal-nav > a:not(.active) {
+  color: white;
+}
+
+.horizontal-nav > a:hover:not(.active) {
+  background-color: rgb(208, 157, 255);
+  color: black;
+}
+
+/*define main*/
+
+main {
+    max-width: 80vw;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    /*background-color: rgba(226, 226, 226, 0.489);*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0; /*z-index cannot be used with position:static*/
+}
+
+/*main-content*/
+.main-content {
+    width: 60%;
+}
+
+.title-and-sub h1 {
+    font-family: 'Gabarito', sans-serif;
+    font-size: 4rem;
+}
+
+.title-and-sub p {
+    color: #898989;
+}
+
+.title-and-sub p a {
+    color: #898989;
+    text-decoration: none;
+}
+
+.title-and-sub p a:hover {
+    color: rgb(0, 82, 204);
+}
+
+.icons {
+    padding-top: 10px;
+}
+
+.icons i {
+    transform: scale(1.5);
+    margin-right: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.text {
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.text p {
+    line-height: 1.8rem;
+    z-index: 0;
+}
+
+.img-text {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.img-text p {
+    color: #898989;
+    font-size: 1rem;
+}
+
+/*author*/
+.author {
+    width: 30%;
+}
+
+.author-img-name {
+    background: #f3c677;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(67, 67, 67, 0.5);
+}
+
+.author-img-name img {
+    width: 45%;
+}
+
+.author-img-name h2 {
+    width: 48%;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 2rem;
+}
+
+.author-intro {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffe8c1;
+    box-shadow: 10px 10px 10px rgba(67, 67, 67, 0.5);
+}
+
+/*user-comments*/
+.user-comments {
+    width: 60%;
+    margin: 8px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.comment-input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.comment-input img {
+    width: 15%;
+    margin: 0px;
+}
+
+#comment-input {
+    width: 82%;
+    height: 20vh;
+    margin: 0px;
+    border: 1px solid #c4c4c4;
+    border-radius: 3px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    resize: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+}
+
+.comment-post-button {
+    width: 100%;
+    margin: 0px;
+}
+
+#comment-post-button {
+    float: right;
+    margin-right: 8px;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 1.1rem;
+    background-color: blueviolet;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#comment-post-button:hover {
+    background-color: rgb(88, 21, 151);
+}
+
+.comments {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.comment {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-picture {
+    width: 10%;
+}
+
+.comment img {
+    width: 100%;
+    height: auto;
+}
+
+.comment-content-date {
+    width: 80%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+}
+
+.comment-content {
+    margin-bottom: 20px;
+}
+
+.comment-date {
+    color: #898989;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #4f4f4f;
+    font-size: 0.9rem;
+}
+
+.comments a {
+    color: #898989;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.comments a:hover {
+    text-decoration: underline;
+}
+
+/*For the footer*/
+.flex-footer {
+    display: flex;
+    background-color: rgb(62, 12, 109);
+    height: 300px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-footer > div {
+    font-family: 'Gabarito', sans-serif;
+    color: white;
+    font-size: 2.2rem;
+} 
+
+.credit {
+    display: flex;
+    font-family: 'Gabarito', sans-serif;
+    color: white;
+    height: 30px;
+    background-color: rgb(62, 12, 109);
+    justify-content: center;
+    align-items: center;
+}

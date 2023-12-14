@@ -1,0 +1,188 @@
+* {
+    margin: 0px;
+}
+
+/*For the header & title*/
+.flex-header {
+    display: flex;
+    background-color: rgb(62, 12, 109);
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+}
+
+.flex-header > div {
+    color: white;
+    padding: 5px;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 1.8rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.flex-header a {
+  text-decoration: none;
+  color: white;
+}
+
+/*For the main content*/
+main {
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 40px;
+    background-color: rgba(226, 226, 226, 0.489);
+}
+
+h1 {
+    display: flex;
+    margin-top: 100px;
+    height: 200px;
+    width: 70%;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    float: right;
+    background-color: blueviolet;
+    font-family: 'Gabarito', sans-serif;
+    color: white;
+    font-size: 6rem;
+    letter-spacing: 4px;
+}
+
+/* For the horizontal navgation bar - the classification of pets */
+.horizontal-nav{
+    display: flex;
+    width: 100%;   
+    align-items: center;
+    align-content: space-between;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 1.8rem;
+    box-shadow: 0px 10px 10px rgba(67, 67, 67, 0.5);
+    background-color: blueviolet;
+    overflow: hidden;
+}
+
+.horizontal-nav > a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 20px 24px 20px 24px; /*padding: top left bottom right*/
+  text-decoration: none;
+  text-align: center; /*make the text inside the <a> vertically centerred*/
+  margin: auto; /*make the text inside the <a> horizontally centerred*/
+}
+
+.horizontal-nav > a.active {
+  background-color: rgb(62, 12, 109);
+  color: white;
+}
+
+.horizontal-nav > a:not(.active) {
+  color: white;
+}
+
+.horizontal-nav > a:hover:not(.active) {
+  background-color: rgb(208, 157, 255);
+  color: black;
+}
+
+/* For the vertical navgation bar - the classification within a specific pet type */
+.vertical-nav {
+  display:flex;
+  width: 20%;
+  height: 100%;
+  align-items: center;
+  align-content: space-between; 
+  font-family: 'Gabarito', sans-serif;
+  font-size: 1.8rem;
+  background-color: #f3c677;
+  box-shadow: 10px 10px 10px rgba(67, 67, 67, 0.5);
+}
+
+.vertical-nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.vertical-nav > ul > li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.vertical-nav > ul > li a.active {
+  background-color: #0c0a3e;
+  color: white;
+}
+
+.vertical-nav > ul > li a:not(.active) {
+  color: black;
+}
+
+.vertical-nav > ul > li a:hover:not(.active) {
+  background-color: #ffe8c1;
+  color: black;
+}
+
+/* For the content of the encyclopedia */
+.information {
+  width: 70%;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+.information h2 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 4.5rem;
+}
+
+.information h3 {
+  font-family: 'Gabarito', sans-serif;
+  font-size: 2.5rem;
+  border-bottom: 1px solid #000000;
+  color: rgb(88, 21, 151);
+}
+
+.information p {
+  padding: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  background-color: rgba(164, 164, 164, 0.349);
+  border-radius: 20px;
+  line-height: 2rem;
+}
+
+/* 2. how to make the text (including background) 'surround' the image*/
+
+/*For the footer*/
+.flex-footer {
+  display: flex;
+  background-color: rgb(62, 12, 109);
+  height: 300px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-footer > div {
+  font-family: 'Gabarito', sans-serif;
+  color: white;
+  font-size: 2.2rem;
+} 
+
+.credit {
+  display: flex;
+  font-family: 'Gabarito', sans-serif;
+  color: white;
+  height: 30px;
+  background-color: rgb(62, 12, 109);
+  justify-content: center;
+  align-items: center;
+}
