@@ -61,3 +61,6 @@
 <p>4. Right click the mouse and find "PHP Server: Serve project" and click it. A page with the address "/localhost:3000" should be opened. If your VS Code says "Server is already running" but your page is not open, click "PHP Server: Reload project" or "PHP Server: open file in browser" instead.</p>
 <p><strong>Important:</strong> Only webpage will address "/localhost:3000" can run the server and Signup/Login function successfully. If it is not "localhost", it is not from the server, thus the data will not be transmitted to the database. As long as you have documents in "htdocs", the address will automatically be "localhost" once you open it following the instructions.</p>
 <p>5. Now you have "home.html" page opened from the server. You can try Signup or Login as it is placed on the page and see what will happen!</p>
+<br>
+
+<p>A demo video of how Signup and Login works can be seen <a href="https://duke.box.com/s/p0r1p9v7q87my2e19d6kgduf2h9r0vmq">here</a>.</p>
